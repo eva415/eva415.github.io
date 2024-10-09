@@ -6,7 +6,7 @@ body {
 
 header {
     font-family: 'Garamond', Garamond, serif;
-    background-color: #3f6304;
+    background-color: #3f6304; /* Dark green color */
     padding: 20px;
     text-align: center;
     color: #d0d9aa;
@@ -59,7 +59,7 @@ p {
     display: flex;
     cursor: pointer;
     padding: 10px;
-    background-color: #ddd; /* Background for inactive tabs */
+    background-color: #3f6304; /* Dark green for inactive tabs matching the header */
     border-bottom: 1px solid #ccc; /* Underline for tabs */
 }
 
@@ -68,12 +68,14 @@ p {
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc; /* Border around each tab */
-    background-color: #445302; /* Background for inactive tabs */
+    background-color: #3f6304; /* Dark green background for inactive tabs */
+    color: #d0d9aa; /* Match the font color to the header text */
     transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
 .tab:hover {
-    background-color: #ccc; /* Change color on hover */
+    background-color: #4CAF50; /* Change color on hover */
+    color: white; /* Change text color on hover */
 }
 
 .tab.active {
