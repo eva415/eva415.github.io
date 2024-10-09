@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    font-family: 'Garamond', Garamond, serif;
+    font-family: 'Garamond', serif; /* Removed redundancy */
     background-color: #3f6304; /* Dark green color */
     padding: 20px;
     text-align: center;
@@ -14,7 +14,7 @@ header {
 }
 
 h1 {
-    font-family: 'Garamond', Garamond, serif;
+    font-family: 'Garamond', serif; /* Consistency with font-family */
     font-size: 36px;
 }
 
@@ -87,6 +87,7 @@ p {
 .tab-content {
     padding: 20px;
     background-color: white; /* Background for tab content */
+    display: none; /* Initially hide tab contents */
 }
 
 .tab-content.active {

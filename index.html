@@ -6,6 +6,65 @@
     <meta name="description" content="Professional Portfolio of Eva Krueger - Robotics Graduate Student and Engineer">
     <title>Eva Krueger</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ddd;
+            margin-top: 10px;
+        }
+        .tab {
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #ccc;
+        }
+        .tab.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tab-content {
+            display: none; /* Hide all tab contents initially */
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .tab-content.active {
+            display: block; /* Show active tab content */
+        }
+        .logo-img {
+            max-width: 200px; /* Adjust logo size as needed */
+            margin: 10px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .project-img {
+            max-width: 100%; /* Responsive image */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,7 +83,6 @@
     <div id="about" class="tab-content active">
         <h2>About Me</h2>
         <p>Hi! I'm Eva Krueger, a robotics PhD student at Oregon State University. I graduated from Swarthmore College in 2024 with a BS in General Engineering and a BA in Environmental Studies. I’m passionate about robotics, particularly in agricultural automation systems, and I’m currently conducting research in manipulation and grasping for use in intelligent machines and materials.</p>
-
         <img src="images/osu_logo.png" alt="Oregon State University" class="logo-img">
         <img src="images/swarthmore_logo.jpg" alt="Swarthmore College" class="logo-img">
     </div>
