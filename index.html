@@ -18,37 +18,75 @@
 
     <div class="tabs">
         <div class="tab active" onclick="showTab('about')">About Me</div>
+        <div class="tab" onclick="showTab('experience')">Experience</div>
         <div class="tab" onclick="showTab('projects')">Projects</div>
         <div class="tab" onclick="showTab('skills')">Skills</div>
         <div class="tab" onclick="showTab('contact')">Contact</div>
     </div>
 
+    <!-- About Me Section -->
     <div id="about" class="tab-content active">
         <h2>About Me</h2>
-        <p>Hi! I'm Eva Krueger, a robotics PhD student at Oregon State University. I graduated from Swarthmore College in 2024 with a BS in General Engineering and a BA in Environmental Studies. I’m passionate about robotics, particularly in agricultural automation systems, and I’m currently conducting research in manipulation and grasping for use in intelligent machines and materials.</p>
+        <p>I am a robotics graduate student at Oregon State University, working in the Intelligent Machines and Materials Lab with Prof. Joseph Davidson.
+           I graduated from Swarthmore College in 2024 with a B.S. in General Engineering and a B.A. in Environmental Studies.</p>
+        <p>During my studies, I am currently focusing on robotics systems design and automation in agriculture.
+            My passion lies in creating efficient and sustainable systems for agricultural automation, and I am
+            currently researching manipulation and grasping techniques for apple harvesting robots.</p>
         <img src="images/osu_logo.png" alt="Oregon State University" class="logo-img">
         <img src="images/swarthmore_logo.jpg" alt="Swarthmore College" class="logo-img">
     </div>
 
+    <!-- Experience Section -->
+    <div id="experience" class="tab-content">
+        <h2>Experience</h2><br>
+        <h3>Horticultural Intern | Scott Arboretum of Swarthmore College</h3>
+        <p><em>Feb 2021 - Present</em></p>
+        <p>Managed sustainable food gardens on campus, organized events, and designed outdoor structures like benches and workstations.</p>
+        <br>
+        <h3>Summer Associate | Farmhand Ventures, Merced, California</h3>
+        <p><em>Jun 2023 – Aug 2023</em></p>
+        <p>Led the development of "FarmGPT" using OpenAI's API to provide insights on specialty crop agricultural markets. Collaborated with startup CEOs and wrote diligence memos for investment opportunities.</p>
+        <br>
+        <h3>Undergraduate Student Researcher | University of Pennsylvania</h3>
+        <p><em>May 2022 - Dec 2022</em></p>
+        <p>Designed biodegradable nanocellulose-based moisture sensors for soil and food packaging applications. Investigated the use of different substrates for sensor performance.</p>
+        <br>
+        <h3>Summer Research Assistant | Swarthmore College</h3>
+        <p><em>May 2021 - Aug 2021</em></p>
+        <p>Worked on aquaponics systems, coded Arduino microcontrollers, and studied the efficacy of different hydroponic farming methods for lettuce growth.</p>
+    </div>
+
+    <!-- Projects Section -->
     <div id="projects" class="tab-content">
         <h2>Projects</h2>
         <ul>
             <li><strong>Imaging Robot for Lettuce Production (Hippo Harvest):</strong> Developed a faster and higher-resolution imaging robot for a greenhouse lettuce farm.</li>
             <img src="images/hippo.jpg" alt="Hippo Harvest Project" class="project-img">
+        <br>
+            <li><strong>Turtlebot Navigation:</strong> Programmed autonomous navigation for a Turtlebot in a dynamic environment (Fall 2023).</li>
+        <br>
+            <li><strong>Electronics Enclosure for Strawberry Harvesting Robot:</strong> Designed and fabricated protective enclosures for harvesting robot electronics (Fall 2023).</li>
+        <br>
+            <li><strong>Plant Care Machine:</strong> Built an automated plant care system using embedded systems for monitoring moisture levels and regulating water (Fall 2021).</li>
+        <br>
+            <li><strong>Spider Web Simulation:</strong> Created a simulation of a spider web structure using linear physical systems (Spring 2022).</li>
         </ul>
     </div>
 
+    <!-- Skills Section -->
     <div id="skills" class="tab-content">
         <h2>Skills</h2>
         <ul>
             <li>Robotics Systems Design</li>
             <li>Machine Learning and AI</li>
-            <li>Python, C++, ROS</li>
-            <li>Computer Vision & Image Processing</li>
+            <li>Python, Java, MATLAB, Arduino</li>
+            <li>Microcontrollers: Particle, ESP8266, NodeMCU</li>
+            <li>3D Design & Fabrication: Fusion360, 3D Printing, Laser Cutting</li>
             <li>Automation in Agriculture</li>
         </ul>
     </div>
 
+    <!-- Contact Section -->
     <div id="contact" class="tab-content">
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:kruegeev@oregonstate.edu">kruegeev@oregonstate.edu</a></p>
@@ -57,7 +95,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Eva Krueger</p>
+        © 2024 Eva Krueger
     </footer>
 
     <script>
@@ -73,7 +111,11 @@
 
             // Show the selected tab and mark it as active
             document.getElementById(tabName).classList.add('active');
-            document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
+            tabLinks.forEach(tabLink => {
+                if (tabLink.textContent.toLowerCase() === tabName) {
+                    tabLink.classList.add('active');
+                }
+            });
         }
     </script>
 </body>

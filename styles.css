@@ -1,8 +1,9 @@
 body {
     font-family: Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
     color: #445302;
+    line-height: 1.5; /* Adjusts the spacing between lines of text inside a paragraph */
 }
 
 header {
@@ -25,9 +26,18 @@ h2 {
     padding: 10px;
 }
 
+em {
+    font-style: italic;
+}
+
 p, ul {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    text-indent: 30px; /* Indents the first line of each paragraph */
+}
+
+footer {
+    font-size: 10px;
     text-indent: 30px; /* Indents the first line of each paragraph */
     padding: 10px;
 }
