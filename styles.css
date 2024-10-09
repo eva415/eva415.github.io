@@ -44,3 +44,42 @@ p {
     margin: 20px 0;
     display: block;
 }
+
+/* Style for the tabs */
+.tabs {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ddd; /* Background for inactive tabs */
+    border-bottom: 1px solid #ccc; /* Underline for tabs */
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Border around each tab */
+    background-color: #f4f4f4; /* Background for inactive tabs */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.tab:hover {
+    background-color: #ccc; /* Change color on hover */
+}
+
+.tab.active {
+    background-color: #4CAF50; /* Active tab color */
+    color: white; /* Active tab text color */
+    border-bottom: 1px solid white; /* Prevents double border */
+}
+
+/* Style for tab content */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ccc; /* Border around tab content */
+    background-color: white; /* Background for tab content */
+}
+
+.tab-content.active {
+    display: block; /* Display active tab content */
+}
