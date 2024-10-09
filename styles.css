@@ -1,15 +1,17 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: white;
-    color: #445302;
+    font-family: 'Times New Roman', Times, serif; /* Keep the font consistent */
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Change to white to match your original */
+    color: #445302; /* Change to match your text color */
 }
 
 header {
-    font-family: 'Garamond', Garamond, serif;
-    background-color: #3f6304; /* Dark green color */
+    font-family: 'Garamond', Garamond, serif; /* Keep the header font */
+    background-color: #3f6304; /* Dark green background */
     padding: 20px;
     text-align: center;
-    color: #d0d9aa;
+    color: #d0d9aa; /* Text color for header */
 }
 
 h1 {
@@ -18,31 +20,28 @@ h1 {
 
 p {
     font-size: 18px;
-    text-indent: 30px; /* Indents the first line of each paragraph */
+    text-indent: 30px; /* Indent first line of each paragraph */
 }
 
 /* Style for your profile picture */
 .profile-img {
     border-radius: 50%;
     width: 150px;
-    height: auto;
+    height: 150px; /* Specify a height for consistency */
     display: block;
     margin: 20px auto;
 }
 
 /* Style for the logos */
 .logo-img {
-    width: 100px;
+    max-width: 200px; /* Adjust logo size as needed */
     margin: 10px;
-    display: inline-block;
 }
 
 /* Style for project images */
 .project-img {
-    width: 100%;
-    max-width: 100px;
-    margin: 20px 0;
-    display: block;
+    max-width: 100%; /* Responsive image */
+    height: auto;
 }
 
 /* Style for the content container */
@@ -59,17 +58,17 @@ p {
     display: flex;
     cursor: pointer;
     padding: 10px;
-    background-color: #3f6304; /* Dark green for inactive tabs matching the header */
-    border-bottom: 1px solid #ccc; /* Underline for tabs */
+    background-color: #3f6304; /* Dark green for tabs matching the header */
+    margin-top: 10px; /* Margin to separate tabs from the header */
 }
 
 .tab {
     flex: 1;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ccc; /* Border around each tab */
     background-color: #3f6304; /* Dark green background for inactive tabs */
     color: #d0d9aa; /* Match the font color to the header text */
+    border: 1px solid #ccc; /* Border around each tab */
     transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
@@ -89,6 +88,7 @@ p {
     padding: 20px;
     border: 1px solid #ccc; /* Border around tab content */
     background-color: white; /* Background for tab content */
+    display: none; /* Hide all tab content by default */
 }
 
 .tab-content.active {

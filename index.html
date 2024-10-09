@@ -5,66 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Portfolio of Eva Krueger - Robotics Graduate Student and Engineer">
     <title>Eva Krueger</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        .tabs {
-            display: flex;
-            cursor: pointer;
-            padding: 10px;
-            background-color: #ddd;
-            margin-top: 10px;
-        }
-        .tab {
-            padding: 10px;
-            flex: 1;
-            text-align: center;
-            background-color: #f4f4f4;
-            border: 1px solid #ccc;
-            transition: background-color 0.3s;
-        }
-        .tab:hover {
-            background-color: #ccc;
-        }
-        .tab.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .tab-content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: white;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .logo-img {
-            max-width: 200px; /* Adjust logo size as needed */
-            margin: 10px;
-        }
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        .project-img {
-            max-width: 100%; /* Responsive image */
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
     <header>
@@ -115,23 +56,23 @@
     </div>
 
     <footer>
-        <p>© 2024 Eva Krueger. All rights reserved.</p>
+        <p>© 2024 Eva Krueger</p>
     </footer>
 
     <script>
-        function showTab(tabId) {
-            // Hide all tab content
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const tabLinks = document.querySelectorAll('.tab');
 
-            // Remove active class from all tabs
-            const tabs = document.querySelectorAll('.tab');
+            // Hide all tab contents
             tabs.forEach(tab => tab.classList.remove('active'));
 
-            // Show the active tab content
-            document.getElementById(tabId).classList.add('active');
-            // Set the clicked tab as active
-            event.currentTarget.classList.add('active');
+            // Remove active class from all tabs
+            tabLinks.forEach(tabLink => tabLink.classList.remove('active'));
+
+            // Show the selected tab and mark it as active
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
         }
     </script>
 </body>
