@@ -68,7 +68,7 @@ p {
     text-align: center;
     padding: 10px;
     border: 1px solid #ccc; /* Border around each tab */
-    background-color: #f4f4f4; /* Background for inactive tabs */
+    background-color: #445302; /* Background for inactive tabs */
     transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
