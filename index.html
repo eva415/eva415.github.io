@@ -6,36 +6,97 @@
     <meta name="description" content="Professional Portfolio of Eva Krueger - Robotics Graduate Student and Engineer">
     <title>Eva Krueger</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ddd;
+            margin-top: 10px;
+        }
+        .tab {
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #ccc;
+        }
+        .tab.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .logo-img {
+            max-width: 200px; /* Adjust logo size as needed */
+            margin: 10px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .project-img {
+            max-width: 100%; /* Responsive image */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Eva Krueger</h1>
         <p>Robotics Graduate Student at Oregon State University</p>
-        <!-- Add your image -->
         <img src="images/eva.jpg" alt="Eva Krueger" class="profile-img">
     </header>
 
-    <section id="about">
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('about')">About Me</div>
+        <div class="tab" onclick="showTab('projects')">Projects</div>
+        <div class="tab" onclick="showTab('skills')">Skills</div>
+        <div class="tab" onclick="showTab('contact')">Contact</div>
+    </div>
+
+    <div id="about" class="tab-content active">
         <h2>About Me</h2>
         <p>Hi! I'm Eva Krueger, a robotics PhD student at Oregon State University. I graduated from Swarthmore College in 2024 with a BS in General Engineering and a BA in Environmental Studies. I’m passionate about robotics, particularly in agricultural automation systems, and I’m currently conducting research in manipulation and grasping for use in intelligent machines and materials.</p>
 
-        <!-- Add Oregon State University logo -->
         <img src="images/osu_logo.png" alt="Oregon State University" class="logo-img">
-
-        <!-- Add Swarthmore College logo -->
         <img src="images/swarthmore_logo.jpg" alt="Swarthmore College" class="logo-img">
-    </section>
+    </div>
 
-    <section id="projects">
+    <div id="projects" class="tab-content">
         <h2>Projects</h2>
         <ul>
             <li><strong>Imaging Robot for Lettuce Production (Hippo Harvest):</strong> Developed a faster and higher-resolution imaging robot for a greenhouse lettuce farm.</li>
-            <!-- Add an image of Hippo Harvest Project -->
             <img src="images/hippo.jpg" alt="Hippo Harvest Project" class="project-img">
         </ul>
-    </section>
+    </div>
 
-    <section id="skills">
+    <div id="skills" class="tab-content">
         <h2>Skills</h2>
         <ul>
             <li>Robotics Systems Design</li>
@@ -44,17 +105,34 @@
             <li>Computer Vision & Image Processing</li>
             <li>Automation in Agriculture</li>
         </ul>
-    </section>
+    </div>
 
-    <section id="contact">
+    <div id="contact" class="tab-content">
         <h2>Contact Information</h2>
         <p>Email: <a href="mailto:kruegeev@oregonstate.edu">kruegeev@oregonstate.edu</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/eva-krueger-020367162/" target="_blank">linkedin.com/in/eva-krueger-020367162</a></p>
         <p>GitHub: <a href="https://github.com/eva415" target="_blank">github.com/eva415</a></p>
-    </section>
+    </div>
 
     <footer>
         <p>© 2024 Eva Krueger. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab content
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show the active tab content
+            document.getElementById(tabId).classList.add('active');
+            // Set the clicked tab as active
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
