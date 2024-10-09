@@ -45,6 +45,15 @@ p {
     display: block;
 }
 
+/* Style for the content container */
+.content-container {
+    border-left: 2px solid #ccc;  /* Left border */
+    border-right: 2px solid #ccc; /* Right border */
+    padding: 20px;                /* Add some padding inside */
+    margin: 20px auto;           /* Center the container with auto margins */
+    max-width: 800px;            /* Optional: Limit the maximum width of the content */
+}
+
 /* Style for the tabs */
 .tabs {
     display: flex;
