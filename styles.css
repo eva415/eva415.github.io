@@ -63,8 +63,14 @@ footer {
 .project-img {
     width: 100%;
     max-width: 100px;
-    margin: 20px 0;
+    margin: 20px auto;
     display: block;
+}
+
+.image-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Optional: Adds space between images */
 }
 
 /* Style for the content container */
