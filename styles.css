@@ -58,7 +58,7 @@ p {
 .tabs {
     display: flex;
     cursor: pointer;
-    padding: 10px;
+    padding: 1px;
     background-color: #3f6304; /* Dark green for inactive tabs matching the header */
     border-bottom: 1px solid #ccc; /* Underline for tabs */
 }
@@ -67,21 +67,21 @@ p {
     flex: 1;
     text-align: center;
     padding: 10px;
-    border: 1px solid #ccc; /* Border around each tab */
+    border: 0px solid #ccc; /* Border around each tab */
     background-color: #3f6304; /* Dark green background for inactive tabs */
     color: #d0d9aa; /* Match the font color to the header text */
     transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
 .tab:hover {
-    background-color: #4CAF50; /* Change color on hover */
-    color: white; /* Change text color on hover */
+    background-color: #d0d9aa; /* Change color on hover */
+    color: #3f6304; /* Change text color on hover */
 }
 
 .tab.active {
-    background-color: #4CAF50; /* Active tab color */
-    color: white; /* Active tab text color */
-    border-bottom: 1px solid white; /* Prevents double border */
+    background-color: #d0d9aa; /* Active tab color */
+    color: #3f6304; /* Active tab text color */
+    border-bottom: 0px solid white; /* Prevents double border */
 }
 
 /* Style for tab content */
