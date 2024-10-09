@@ -61,8 +61,8 @@ footer {
 
 /* Style for project images */
 .project-img {
-    width: 100%;
-    max-width: 100px;
+    height: 100 px;
+    width: auto;
     margin: 20px auto;
     display: block;
 }
