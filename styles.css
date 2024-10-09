@@ -1,15 +1,15 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f3f6e5;
+    color: #445302;
 }
 
 header {
     font-family: 'Garamond', Garamond, serif;
-    background-color: #4CAF50;
+    background-color: #3f6304;
     padding: 20px;
     text-align: center;
-    color: white;
+    color: #d0d9aa;
 }
 
 h1 {
