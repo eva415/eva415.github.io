@@ -1,4 +1,64 @@
-@ -62,14 +62,12 @@ p {
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: white;
+    color: #445302;
+}
+
+header {
+    font-family: 'Garamond', serif; /* Removed redundancy */
+    background-color: #3f6304; /* Dark green color */
+    padding: 20px;
+    text-align: center;
+    color: #d0d9aa;
+}
+
+h1 {
+    font-family: 'Garamond', serif; /* Consistency with font-family */
+    font-size: 36px;
+}
+
+p {
+    font-size: 16px;
+    text-indent: 30px; /* Indents the first line of each paragraph */
+}
+
+/* Style for your profile picture */
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Style for the logos */
+.logo-img {
+    width: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* Style for project images */
+.project-img {
+    width: 100%;
+    max-width: 100px;
+    margin: 20px 0;
+    display: block;
+}
+
+/* Style for the content container */
+.content-container {
+    border-left: 5px solid #ccc;  /* Left border */
+    border-right: 5px solid #ccc; /* Right border */
+    padding: 20px;                /* Add some padding inside */
+    margin: 20px auto;           /* Center the container with auto margins */
+    max-width: 800px;            /* Optional: Limit the maximum width of the content */
+}
+
+/* Style for the tabs */
+.tabs {
+    display: flex;
     cursor: pointer;
     padding: 1px;
     background-color: #3f6304; /* Dark green for inactive tabs matching the header */
@@ -11,7 +71,13 @@
     background-color: #3f6304; /* Dark green background for inactive tabs */
     color: #d0d9aa; /* Match the font color to the header text */
     transition: background-color 0.3s; /* Smooth transition for hover effects */
-@ -83,13 +81,11 @@ p {
+}
+
+.tab:hover {
+    background-color: #d0d9aa; /* Change color on hover */
+    color: #3f6304; /* Change text color on hover */
+}
+
 .tab.active {
     background-color: #d0d9aa; /* Active tab color */
     color: #3f6304; /* Active tab text color */
@@ -21,5 +87,9 @@
 .tab-content {
     padding: 20px;
     background-color: white; /* Background for tab content */
+    display: none; /* Initially hide tab contents */
 }
 
+.tab-content.active {
+    display: block; /* Display active tab content */
+}

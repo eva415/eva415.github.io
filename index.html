@@ -7,6 +7,63 @@
     <title>Eva Krueger</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ddd;
+            margin-top: 10px;
+        }
+        .tab {
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #ccc;
+        }
+        .tab.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tab-content {
+            display: none; /* Hide all tab contents initially */
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .tab-content.active {
+            display: block; /* Show active tab content */
+        }
+        .logo-img {
+            max-width: 200px; /* Adjust logo size as needed */
+            margin: 10px;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .project-img {
+            max-width: 100%; /* Responsive image */
+            height: auto;
+        }
     </style>
 </head>
 <body>
