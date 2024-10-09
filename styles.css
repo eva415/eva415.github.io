@@ -25,13 +25,14 @@ p {
 .profile-img {
     border-radius: 50%;
     width: 150px;
+    height: auto;
     display: block;
     margin: 20px auto;
 }
 
 /* Style for the logos */
 .logo-img {
-    max-width: 100px;
+    width: 100px;
     margin: 10px;
     display: inline-block;
 }
