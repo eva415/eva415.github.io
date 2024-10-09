@@ -1,12 +1,12 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, sans-serif;
     font-size: 16px;
     background-color: white;
     color: #445302;
 }
 
 header {
-    font-family: 'Garamond', serif; /* Removed redundancy */
+    font-family: Verdana, sans-serif; /* Removed redundancy */
     background-color: #3f6304; /* Dark green color */
     padding: 20px;
     text-align: center;
@@ -14,13 +14,22 @@ header {
 }
 
 h1 {
-    font-family: 'Garamond', serif; /* Consistency with font-family */
+    font-family: 'Lucida Console', Monaco, monospace;
     font-size: 36px;
+    padding: 10px;
 }
 
-p {
+h2 {
+    font-family: Verdana, sans-serif; /* Consistency with font-family */
+    font-size: 25px;
+    padding: 10px;
+}
+
+p, ul {
+    font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 16px;
     text-indent: 30px; /* Indents the first line of each paragraph */
+    padding: 10px;
 }
 
 /* Style for your profile picture */
@@ -74,7 +83,7 @@ p {
 }
 
 .tab:hover {
-    background-color: #d0d9aa; /* Keep color on hover */
+    background-color: #3f6304; /* Keep color on hover */
     color: #f6fbdf; /* Change text color on hover */
 }
 
