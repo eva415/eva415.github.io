@@ -1,6 +1,6 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f3f6e5;
+    background-color: white;
     color: #445302;
 }
 
@@ -40,7 +40,7 @@ p {
 /* Style for project images */
 .project-img {
     width: 100%;
-    max-width: 500px;
+    max-width: 100px;
     margin: 20px 0;
     display: block;
 }
