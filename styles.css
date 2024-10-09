@@ -17,11 +17,29 @@ h1 {
 
 p {
     font-size: 18px;
-    text-indent: 30px; /* Adds a 30px indent to the start of each paragraph */
+    text-indent: 30px; /* Indents the first line of each paragraph */
 }
 
-img {
+/* Style for your profile picture */
+.profile-img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Style for the logos */
+.logo-img {
+    width: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* Style for project images */
+.project-img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    display: block;
 }
